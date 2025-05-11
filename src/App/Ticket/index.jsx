@@ -124,6 +124,8 @@ export const Ticket = () => {
                       <Input
                         type="number"
                         {...register("protocol_Id")}
+                        min={6}
+                        max={6}
                         required
                       />
                     </Label>
