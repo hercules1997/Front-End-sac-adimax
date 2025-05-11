@@ -35,6 +35,7 @@ export const Ticket = () => {
   const [tutors, setTutors] = useState([]);
   const [formData, setFormData] = useState({});
   const [gifts, setGifts] = useState([]);
+  const [valor, setValor] = useState();
 
   const nextStep = () => setStep((prev) => prev + 1);
   const backStep = () => setStep((prev) => prev - 1);
@@ -122,10 +123,17 @@ export const Ticket = () => {
                     <Label flex="2">
                       n° do Ticket
                       <Input
-                        type="number"
+                        type="text"
                         {...register("protocol_Id")}
-                        min={6}
-                        max={6}
+                        inputMode="numeric"
+                        pattern="\d*"
+                        value={valor}
+                        onChange={(e) => {
+                          const value = e.target.value;
+                          if (/^\d{0,6}$/.test(value)) {
+                            setValor(value);
+                          }
+                        }}
                         required
                       />
                     </Label>
@@ -144,7 +152,7 @@ export const Ticket = () => {
                           setFormData(tutor);
                           nextStep();
                         } else {
-                          toast.error("Protocolo não encontrado!");
+                          toast.error("nº de Ticket não encontrado!");
                         }
                       }}
                     >
