@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-import { paths } from "../../constants";
+import { paths } from "../../constants/paths.js";
 import listMenu from "./listMenu";
 import {
   ContainerItems,

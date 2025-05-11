@@ -15,7 +15,7 @@ import {
 } from "./styledTicket";
 
 import { useNavigate } from "react-router-dom";
-import { paths } from "../../constants";
+import { paths } from "../../constants/paths.js";
 import { motion, AnimatePresence } from "framer-motion";
 import { ProgressBar } from "../../Components/ProcessBar";
 import { Loading } from "../../Components";
