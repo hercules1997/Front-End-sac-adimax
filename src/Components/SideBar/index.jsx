@@ -16,12 +16,11 @@ import {
 import { Logo } from "../Logo";
 import { useUser } from "../../Hooks/UserContext";
 
-export const SideBar = ({ path, menuOpen }) => {
+export const SideBar = ({ path }) => {
   const navigate = useNavigate();
   const { logout } = useUser();
-
   return (
-    <ContainerMenu menuOpen={menuOpen}>
+    <ContainerMenu>
       <Logo />
 
       {listMenu.map((item) => {
