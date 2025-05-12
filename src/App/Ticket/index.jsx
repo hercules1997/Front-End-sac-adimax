@@ -128,13 +128,13 @@ export const Ticket = () => {
                         inputMode="numeric"
                         pattern="\d*"
                         value={valor}
-                        required
                         onChange={(e) => {
                           const value = e.target.value;
                           if (/^\d{0,6}$/.test(value)) {
                             setValor(value);
                           }
                         }}
+               
                       />
                     </Label>
                   </Div>
