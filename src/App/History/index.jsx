@@ -100,7 +100,7 @@ export const History = () => {
                     <Td>{new Date(history.createdAt).toLocaleString()}</Td>
                     <Td>{new Date(history.createdAt).toLocaleString()}</Td>
                   </Tr>
-                   
+                  
                 ))}
               </>
             )}
